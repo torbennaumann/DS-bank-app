@@ -1,0 +1,14 @@
+# conda env create|update --file environment.yml
+name: neue-fische-bank-app
+dependencies:
+- python=3.6
+- pip
+- pip:
+  - '--editable=.'
+  - flake8
+  - flake8-quotes
+  - jupyter
+  - matplotlib
+  - numpy
+  - pandas
+  - pytest
