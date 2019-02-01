@@ -3,7 +3,7 @@
 ## Setup
 
 ```sh
-git clone https://github.com/maddosz12/pytorch_team_2.git
+git clone https://github.com/funkensturm/neue-fische-bank-app.git
 ```
 
 ```sh
