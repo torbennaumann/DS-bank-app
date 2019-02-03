@@ -4,6 +4,7 @@
 
 ```sh
 git clone https://github.com/funkensturm/neue-fische-bank-app.git
+git remote add upstream https://github.com/funkensturm/neue-fische-bank-app.git
 ```
 
 ```sh
@@ -26,11 +27,11 @@ jupyter notebook
 ```bash
  # Check out the branch
  git checkout lesson_1
- 
+
  # Run the tests
  pytest
  flake8
- 
+
  # Commit and push your results
  git add .
  git commit -m 'Implement bank'
