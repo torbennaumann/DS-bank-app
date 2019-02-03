@@ -19,6 +19,35 @@ source activate neue-fische-bank-app
 jupyter notebook
 ```
 
+## Lessons
+
+### Lesson 1
+
+```bash
+	# Check out the branch
+	git checkout lesson_1
+
+	# Run the tests
+	pytest
+	flake8
+
+	# Commit and push your results
+	git add .
+	git commit -m 'Implement bank'
+	git push
+```
+
+Die Bank soll folgende Eigenschaften haben:
+
+Properties:
+- Namen (String)
+- Accounts (List)
+- Transactions (List)
+
+Methods:
+- open_account()
+- add_transaction()
+
 ## Tests
 
 ```sh
