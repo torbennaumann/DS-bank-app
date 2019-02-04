@@ -3,7 +3,7 @@
 ## Setup
 
 ```sh
-git clone https://github.com/funkensturm/neue-fische-bank-app.git
+git clone https://github.com/neuefische/DS-bank-app.git
 ```
 
 ```sh
