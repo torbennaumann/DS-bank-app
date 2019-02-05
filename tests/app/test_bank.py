@@ -1,7 +1,6 @@
 import unittest
 import app
 
-
 class TestBank(unittest.TestCase):
     def test_bank_can_be_initialized(self):
         bank = app.Bank('GLS')
@@ -38,25 +37,24 @@ class TestBank(unittest.TestCase):
 
         self.assertEqual(einstein, account)
 
-    # Extra Task
-    # def test_open_account_number_needs_to_be_unique(self):
-    #     bank = app.Bank('GLS')
-    #     self.assertEqual(bank.accounts, [])
-    #
-    #     # Add an account
-    #     account = {
-    #         'number': 1,
-    #         'firstname': 'Albert',
-    #         'lastname': 'Einstein',
-    #     }
-    #     bank.open_account(account)
-    #
-    #     message = 'Account number 1 already taken!'
-    #     with self.assertRaisesRegex(AssertionError, message):
-    #         bank.open_account(account)
-    #
-    #     # Only one account entry is saved in accounts
-    #     self.assertEqual(bank.accounts, [account])
+    def test_open_account_number_needs_to_be_unique(self):
+        bank = app.Bank('GLS')
+        self.assertEqual(bank.accounts, [])
+
+        # Add an account
+        account = {
+            'number': 1,
+            'firstname': 'Albert',
+            'lastname': 'Einstein',
+        }
+        bank.open_account(account)
+
+        message = 'Account number 1 already taken!'
+        with self.assertRaisesRegex(AssertionError, message):
+            bank.open_account(account)
+
+        # Only one account entry is saved in accounts
+        self.assertEqual(bank.accounts, [account])
 
     def test_add_transaction(self):
         bank = app.Bank('GLS')
