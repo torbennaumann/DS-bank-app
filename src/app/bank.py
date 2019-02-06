@@ -29,10 +29,6 @@ class Bank:
         amounts = [transaction['amount'] for transaction in self.transactions]
         return sum(amounts)
 
-    def ind_transaction(self):
-        counts = [transaction['sender'] for transaction in self.transactions]
-        string.count(counts)
-
     def info(self):
         print('Name: ' + self.name)
         print('Account(s): ' + str(len(self.accounts)))
