@@ -24,3 +24,19 @@ class Bank:
         assert amount > 0, message2
         self.transactions.append(transaction)
         return transaction
+
+    def tot_revenue(self):
+        amounts = [transaction['amount'] for transaction in self.transactions]
+        return sum(amounts)
+
+    def ind_transaction(self):
+        counts = [transaction['sender'] for transaction in self.transactions]
+        string.count(counts)
+
+    def info(self):
+        print('Name: ' + self.name)
+        print('Account(s): ' + str(len(self.accounts)))
+        for account in self.accounts:
+            print('Name: ' + account['lastname'] + ', ' + account['firstname'])
+        print('Transaction(s): ' + str(len(self.transactions)))
+        print('Total revenue streams: {}' .format(self.tot_revenue()))
