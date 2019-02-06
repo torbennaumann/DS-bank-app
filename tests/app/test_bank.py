@@ -1,6 +1,7 @@
 import unittest
 import app
 
+
 class TestBank(unittest.TestCase):
     def test_bank_can_be_initialized(self):
         bank = app.Bank('GLS')
