@@ -9,7 +9,7 @@ class Bank:
         message1 = 'Account number 1 already taken!'
         account_already_exists = 0
         for old_account in self.accounts:
-            if old_account["number"] == account["number"]:
+            if old_account['number'] == account['number']:
                 account_already_exists = 1
         assert account_already_exists == 0, message1
         self.accounts.append(account)
@@ -24,9 +24,8 @@ class Bank:
 
         message2 = 'Amount has to be greater than 0'
 
-        assert amount>0, message2
+        assert amount > 0, message2
 
         self.transactions.append(transaction)
 
         return transaction
-    
