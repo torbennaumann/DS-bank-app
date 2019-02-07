@@ -9,8 +9,26 @@ class Account:
         self.number = number
         self.balance = balance
 
+        # path_info = {
+        #     'root': '/path/to/docs',
+        #     'number': self.number,
+        #     'type': 'statements',
+        #     'filename': 'ABCDEFG'}
+        #
+        # statement_path = self.path_template.format(**path_info)
+        #
+        # statement_path = self.path_template.format('root': '/path/to/docs',
+        #                                            'number': self.number,
+        #                                            'type': 'statements',
+        #                                            'filename': 'ABCDEFG')
+
     def info(self):
-        return 'Number ' + str(self.number) + ': ' + self.firstname + ' ' + self.lastname + ' - ' + str(self.balance) + ' €'
+        template = 'Number {number}: {firstname} {lastname} - {balance} €'
+        return template.format(number=self.number, firstname = self.firstname, lastname = self.lastname, balance = self.balance)
+
+    # alternative(n) für .info:
+    # def info(self):
+    #     return f'Number {self.number}: {self.firstname} {self.lastname} - {self.balance} €'
 
     def has_funds_for(self, amount):
         return self.balance >= amount
