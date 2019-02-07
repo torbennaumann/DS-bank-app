@@ -13,5 +13,4 @@ class Transaction:
 
     def info(self):
         template = 'From {sender} to {recipient}: {subject} - {amount} €'
-        return template.format(sender = self.sender, recipient = self.recipient, subject = self.subject, amount = self.amount)
-
+        return template.format(sender=self.sender, recipient=self.recipient, subject=self.subject, amount=self.amount)

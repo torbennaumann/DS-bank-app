@@ -24,7 +24,7 @@ class Account:
 
     def info(self):
         template = 'Number {number}: {firstname} {lastname} - {balance} €'
-        return template.format(number=self.number, firstname = self.firstname, lastname = self.lastname, balance = self.balance)
+        return template.format(number=self.number, firstname=self.firstname, lastname=self.lastname, balance=self.balance)
 
     # alternative(n) für .info:
     # def info(self):
@@ -40,4 +40,3 @@ class Account:
     def subtract_from_balance(self, amount):
         assert amount < self.balance, 'Account has not enough funds'
         self.balance = self.balance - amount
-

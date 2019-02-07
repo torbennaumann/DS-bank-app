@@ -24,7 +24,10 @@ class Bank:
         elif recipient.number not in self.accounts:
             raise AssertionError('Recipient has no account yet!')
         else:
-            trans = app.Transaction(sender=sender.number, recipient=recipient.number, subject=subject, amount=amount)
+            trans = app.Transaction(sender=sender.number,
+                                    recipient=recipient.number,
+                                    subject=subject,
+                                    amount=amount)
             self.transactions.append(trans)
             self._update_funds(sender, recipient, amount)
             return trans
@@ -37,15 +40,13 @@ class Bank:
             self.transactions.pop()
             raise AssertionError('Account has not enough funds')
 
-########################################################################################
-
     def tot_revenue(self):
         amounts = [transaction['amount'] for transaction in self.transactions]
         return sum(amounts)
 
     def ind_transaction(self):
         counts = [transaction['sender'] for transaction in self.transactions]
-        string.count(counts)
+        str.count(counts)
 
     def info(self):
         print('Name: ' + self.name)
