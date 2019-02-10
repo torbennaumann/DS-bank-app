@@ -12,3 +12,6 @@ dependencies:
   - numpy
   - pandas
   - pytest
+  - pytest-mock
+  - scipy
+  - sklearn
